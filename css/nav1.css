@@ -1,0 +1,219 @@
+ /*Reset dokumentet, så ingen forudindstillede funktioner driller os*/
+ * {
+     margin: 0;
+     padding: 0px;
+     box-sizing: border-box;
+ }
+
+
+ /*Selve baren i toppen af sitet*/
+ nav {
+     background-color: #f9f9f9;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     height: 55px;
+     border-top: 1px solid black;
+     border-bottom: 1px solid black;
+     margin-top: 5px;
+     width: 100%;
+     position: fixed;
+
+}
+
+ /*logo styling*/
+ .logo a {
+     font-size: 15px;
+     text-decoration: none;
+     color: black;
+     font-size: 20px;
+     font-family: poppins;
+     letter-spacing: 3px;
+ }
+
+ /*Besøgte links skal ikke ændre farve*/
+ nav a:visited {
+     color: f9f9f9f;
+ }
+
+ /*Navigationslisten skal vises som flex*/
+ nav ul {
+     display: flex;
+ }
+
+
+ /*Hovedpunkterne i menuen*/
+ nav ul li {
+     list-style: none;
+     color: black;
+     padding-left: 10px;
+     padding-right: 10px;
+     margin-left: 0px;
+ }
+
+
+
+ /*hovedpunktene i menuen link styling*/
+ nav ul a {
+     text-decoration: none;
+     color: black;
+     font-family: poppins;
+     letter-spacing: 2px;
+     display: block;
+     padding: 5px;
+     font-size: 10px;
+ }
+
+ /*Hover effekt når musen trækkes over*/
+ nav ul a:hover {
+     background-color: lightgray;
+ }
+
+ /*Hover effekt når musen trækkes over - dropdown*/
+ nav ul a:hover ul {
+     background-color: lightgray;
+ }
+
+
+ /*Dropdownmenuen*/
+ nav ul li ul {
+     position: absolute;
+     display: none;
+ }
+
+
+
+ /*Når musen holdes over menupunktet der er en dropdown*/
+ .dropdown {
+     cursor: pointer;
+ }
+
+ /*Udseende og position af dropdownmenuen*/
+ .dropdown1 {
+     display: none;
+     position: absolute;
+     background-color: #f9f9f9;
+     min-width: 160px;
+     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+     z-index: 1;
+ }
+
+ /*links i dropdownmenuen*/
+ .dropdown1 a {
+     color: black;
+     padding: 12px 16px;
+     text-decoration: none;
+     display: block;
+ }
+
+ /*Hover effekten på til underdropdown*/
+ .dropdown1 a:hover {
+     background-color: #f9f9f9
+ }
+
+ /*dropdown*/
+ .dropdown:hover .dropdown1 {
+     display: block;
+ }
+
+ /*styling af under dropdown*/
+ .dropdown2 {
+     display: none;
+     position: absolute;
+     background-color: #f9f9f9;
+     min-width: 160px;
+     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+     z-index: 1;
+     left: 100%;
+     top: 25%;
+ }
+
+ /*Underdropdovn hover vis*/
+ .asien:hover .dropdown2 {
+     display: block;
+ }
+
+ /*dele der ikke skal vises på mobilen*/
+ .mobhide {
+     display: none;
+ }
+
+ /*Dele der ikke skal vises på tablet*/
+ .tabhide {
+     display: none;
+ }
+
+
+ /*---------------IPAD & DESKTOP--------------------*/
+
+
+
+ @media screen and (min-width: 768px) and (max-width: 1024px) {
+
+     /*Dele der ikke skal vises på tablet*/
+     .tabhide {
+         display: none;
+     }
+
+     /*dele der ikke skal vises på mobilen - men skal vises her på tablet*/
+     .mobhide {
+         display: block;
+     }
+
+     /*styling af menupunkterne på tablet*/
+     nav ul a {
+         display: flex;
+         justify-content: space-around;
+         width: 150%;
+         font-size: 13px;
+     }
+
+ }
+
+
+
+ @media screen and (min-width: 1025px) {
+
+     /*De ting der ikke vises på mobil og tablet, skal vises her*/
+     .mobhide,
+     .tabhide {
+         display: block;
+     }
+
+     /*styling af menupunkterne på desktop*/
+     nav ul a {
+         display: flex;
+         justify-content: space-around;
+         font-size: 13px;
+         padding-left: 20px;
+         padding-right: 20px;
+     }
+
+ }
+
+
+
+
+ /*------------------------Fyld på siden-----------*/
+
+/*Baggrundsbillede*/
+.boks1 {
+    background-color: lightgray;
+    text-align: center;
+    font-size: 50px;
+    color: grey;
+    
+}
+
+.boks2 {
+    background-color: grey;
+    height: 200px;
+    font-size: 50px;
+    text-align: center;
+    color: #f3f3f3;
+
+}
+
+main img {
+    width: 100%;
+}

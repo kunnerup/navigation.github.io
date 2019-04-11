@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 9;
+    background-color: #f1f1f1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar {
+    background-color: #333;
+    opacity: 0.8;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    height: 50px;
+    transition: top 0.3s;
+}
+
+nav ul {
+    height: 70px;
+    list-style: none;
+
+}
+
+nav ul li {
+    display: block;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+
+/*-----------FYLD------------------*/
+.boxing {
+    height: 1000px;
+    background-color:floralwhite;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.boxing2 {
+    height: 1000px;
+    background-color:midnightblue;
+}
+
+.boxing div {
+  display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    justify-content: center;
+}
+
+h2{
+    color: darkred;
+    font-weight: bolder;
+    font-size: 50px;
+    letter-spacing: -3px;
+    border-bottom: darkred 2px solid;
+}
+
+h3 {
+    margin-top: -30px;   
+}
+
+h4 {
+    font-size: 40px;
+    margin-bottom: -30px;
+}
+
+.boxing ul {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+}

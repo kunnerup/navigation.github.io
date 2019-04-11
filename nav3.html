@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+    <title>Layout with Styles</title>
+    <link href="css/nav3.css" rel="stylesheet">
+    <title>NAVIGATION</title>
+</head>
+<body>
+<header class="header">
+
+  <nav class="navigation">
+
+    <section class="logo"></section>
+
+    <section class="navigation__icon">
+      <span class="topBar"></span>
+      <span class="middleBar"></span>
+      <span class="bottomBar"></span>
+    </section>
+
+    <ul class="navigation__ul">
+      <li><a href="index.html">HJEM</a></li>
+      <li><a href="">GALLERI</a></li>
+      <li><a href="">SHOP</a></li>
+      <li><a href="">KUNDER</a></li>
+      <li><a href="">KONTAKT</a></li>
+    </ul>
+
+    <section class="navigation__social">
+      <ul class="navigation__social-ul">
+        <li>
+          <a href="" class="social-icon"></a>
+        </li>
+        <li>
+          <a href="" class="social-icon"></a>
+        </li>
+        <li>
+          <a href="" class="social-icon"></a>
+        </li>
+        <li>
+          <a href="" class="social-icon"></a>
+        </li>
+      </ul>
+    </section>
+
+  </nav>
+
+</header>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+    
+        
+   
+     $(function() {
+   $(".navigation__icon").click(function() {
+     $(".navigation").toggleClass('navigation-open');
+   });
+ });
+  
+    
+        
+   
+    navigation
+    </script>
+</body>
+</html>

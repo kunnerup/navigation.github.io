@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+    <title>NAVIGATION</title>
+    <link href="css/nav1.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!--Herunder hele navitationsbaren-->
+        <nav>
+
+            <!--Logoet-->
+                <div class="logo">
+                    <a href="index.html">
+                        <h4>NAV TUT</h4>
+                    </a>
+                </div>
+
+
+                <!--Her selve menuen-->
+            <div id="navbar">
+                    <ul class="navlinks">
+                        <li class="dropdown"><a href="nav2.html">Menukort</a>
+                            <!--Her kommer første dropdown - bemærk at det er placeret INDE i 'menukort'-li-->
+                                <ul class="dropdown1">
+                                    <li><a>Dansk mad</a></li>
+                                    <li class="asien"><a>Asiatisk mad</a>
+                                        <!--er vores under-dropdown.. Igen placeret INDE i asien-li-->
+                                            <ul class="dropdown2">
+                                                <li><a>Kinesisk</a></li>
+                                                <li><a>Japansk</a></li>
+                                                <li><a>Koreansk</a></li>
+                                            </ul>
+                                    </li>
+                                    <li><a>Amerikansk mad</a></li>
+                                    <li><a>Italiensk mad</a></li>
+                                </ul>
+
+                        </li>
+                        <!--Her fortsætter navigationen uden dropdown-->
+                            <li><a href="nav3.html">Bestil Bord</a></li>
+
+                            <!--Nedenstående er de menupunkter som ikke skal vises på henholdsvis tablet og mobil for at få færre menupunkter-->
+                                <li class="mobhide"><a href="nav3.html">Værd at vide</a></li>
+                                <li class="tabhide"><a href="nav4.html">Historie</a></li>
+
+                                <li><a href="nav4.html">Kontakt</a></li>
+
+                    </ul>
+</div>
+                
+        </nav>
+
+        <!--Herunder indsættes alt relevant indhold-->
+            <main>
+                
+                <img src="images/burgershack.jpg">
+                
+ <div class="boks1"><img src="images/codedrop.png" alt="htmlkode"></div>
+                
+                
+                
+                 <div class="boks2"> nav ul li ul { position: absolute; display: none;}
+                     <br><br>
+                     .dropdown:hover .dropdown1 {  display: block;}</div>
+                
+                
+                
+                 <div class="boks1">.dropdown2 {
+     left: 100%;
+     top: 25%;}</div>
+            </main>
+
+
+            <footer>
+
+            </footer>
+
+   
+      <!--JavaScript der gør at baren kun vises i toppen og når man scroller op--> 
+
+    
+</body>
+    
+</html>

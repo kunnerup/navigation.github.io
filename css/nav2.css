@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #f3f3f3;
+    overflow-x: hidden;
+}
+
+  nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 6vh;
+        background-color: #333;
+        width: 100%
+       
+    }
+a{
+  text-decoration: none;
+  color: #f3f3f3;
+}
+
+.logo{
+        color: #f3f3f3;
+        font-size: 25px;
+    }
+
+ .nav-links li{
+        list-style: none;
+    }
+
+.main-menu li{
+    list-style: none;
+}
+
+/*------ HELE SITET -  MOBILE FIRST -------*/
+ 
+@media screen and (max-width: 767px) {
+    .main-menu{
+        display: none;
+    }
+    
+    .nav-links a{
+        color: #f3f3f3;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    #menuToggle
+{
+  position: relative;
+    right: 0;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -4px;
+  left: -2px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  top: 6vh;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+.nav-links
+{
+  position: absolute;
+        top: 4.6vh;
+        height: 20vh;
+        background-color: #777;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-around;
+        width: 22vh;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+overflow-x: hidden;
+}
+
+.nav-links li
+{
+list-style: none;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: translateX(-40%);
+}
+    
+    
+
+    }
+/*---------------IPAD & DESKTOP--------------------*/
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+   
+    #menuToggle{
+        display: none;
+    }
+  
+    
+    .main-menu{
+        display: flex;
+        justify-content: space-around;
+        width: 120%;
+        
+    }
+    .main-menu a{
+        color: #f3f3f3;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+}
+
+
+@media screen and (min-width: 1025px) {
+    
+     #menuToggle{
+        display: none;
+    }
+    nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 6vh;
+        background-color: #333;
+        width: 100%
+       
+    }
+    
+    .main-menu{
+        display: flex;
+        justify-content: space-around;
+        width: 150%;
+        
+    }
+    .main-menu a{
+        color: #f3f3f3;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+
+
+
+
+
+/*-----------------------------FYLD--------------------*/
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+/* Container for flexboxes */
+.row {
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Create three unequal columns that sits next to each other */
+.column {
+  padding: 10px;
+  height: 400px; /* Should be removed. Only for demonstration */
+}
+
+/* Left and right column */
+.column.side {
+   -webkit-flex: 1;
+   -ms-flex: 1;
+   flex: 1;
+}
+
+/* Middle column */
+.column.middle {
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+/* Style the footer */
+footer {
+    display: flex;
+  background-color: #888;
+  padding: 10px;
+    height: 360px;
+   justify-content: center;
+    align-items: center;
+}
+
+
+.boxing {
+    background-color: #f3f3f3;
+    height: 940px;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 20px;
+}
