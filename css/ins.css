@@ -57,11 +57,6 @@ nav ul li {
     text-align: center;
 }
 
-.boxing2 {
-    height: 1000px;
-    background-color:midnightblue;
-}
-
 .boxing div {
   display: flex;
     flex-direction: column;
@@ -83,13 +78,13 @@ h3 {
 }
 
 h4 {
-    font-size: 40px;
-    margin-bottom: -30px;
+    font-size: 25px;
+    margin-bottom: -20px;
+    color: darkred;
+    text-align: left;
 }
 
 .boxing ul {
     text-align: left;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 40px;
+    font-size: 20px;
 }
